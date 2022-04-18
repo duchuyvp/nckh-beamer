@@ -14,6 +14,7 @@
 \usepackage[vietnamese]{babel}
 \usepackage[ruled]{algorithm2e}
 \usepackage{caption}
+\usepackage{multicol}
 
 \useoutertheme{infolines}
 
@@ -430,8 +431,242 @@
     \end{algorithm}
 
 \end{frame}
-\section{Experiment}
 
+\begin{frame}{Frame Title}
+    \begin{corollary}
+        Vì $nP + mP = \underbrace{P+P+P+\ldots+P}_{n} + \underbrace{P+P+P+\ldots+P}_{m} = (n+m)P$
+        nên khi cộng 2 bội của $P$ ta thu được bội khác của $P$. Tập hợp các bội của $P$ là một nhóm cyclic với bậc $k$, trong đó $P$ là phần tử sinh.
+    \end{corollary}
+    \begin{theorem}[Định lý Lagrange]
+        Nếu $H$ là nhóm con của nhóm hữu hạn $G$, thì bậc (số phần tử) của $G$ chia hết cho bậc của $H$.
+    \end{theorem}
+    \begin{corollary}
+        Nếu bậc của nhóm hữu hạn $G$ là số nguyên tố $p$ thì bậc của nhóm con $H$ là $1$ hoặc $p$.
+
+        Nếu bậc của $H$ là $p$, mọi điểm thuộc $G$ đều là phần tử sinh của nhóm con $H$
+    \end{corollary}
+\end{frame}
+\subsection{Logarit rời rạc và mã hóa}
+\begin{frame}{Bài toán logarit rời rạc đối với đường cong elliptic}
+    \begin{definition}
+        \label{define:3.1}
+        Cho đường cong elliptic $E$ trên trường hữu hạn $F$, và nhóm $G$ bao gồm tập các điểm trên $E$ được định nghĩa với phép $+$. Cho điểm
+        $P, Q \in G$ sao cho $Q$ là bội của $P$, hay $Q = kP$ với $k$ là số nguyên. Bài toán logarit rời rạc được định nghĩa như sau:
+
+        \begin{tabular}{l}
+            \\
+            Cho trước 2 điểm $P, Q \in G$.                \\
+            Tìm số nguyên $k$ nhỏ nhất thỏa mãn $kP = Q$. \\
+            \\
+        \end{tabular}
+
+        $k$ gọi là logarit rời rạc của $Q$ theo cơ sở $P$.
+
+    \end{definition}
+\end{frame}
+
+\begin{frame}{Bài toán logarit rời rạc đối với đường cong elliptic}
+    Xét trường hữu hạn $\mathbb{F}_p$ bao gồm các số nguyên theo modulo $p$, trong đó $p$ là số nguyên tố.
+    Kí hiệu $E(\mathbb{F}^2_p)$ là tập điểm của $\mathbb{F}^2_p$ nằm trên đường cong $E$.
+
+    Điểm $P=(x,y) \in \mathbb{F}_p^2$ khi và chỉ khi, với mọi $a,b \in \mathbb{F}_p$, biểu thức được thỏa mãn:
+    \begin{equation}
+        \label{equation:3.8}
+        y^2 \equiv x^3 + ax + b \pmod{p}
+    \end{equation}
+
+    $E(\mathbb{F}^2_p)$ là một nhóm abel với phép toán $+$ được định nghĩa ở trên.
+
+
+\end{frame}
+\begin{frame}{Bài toán logarit rời rạc đối với đường cong elliptic}
+    Xét trường hữu hạn $\mathbb{F}_p$ bao gồm các số nguyên theo modulo $p$, trong đó $p$ là số nguyên tố.
+    Kí hiệu $E(\mathbb{F}^2_p)$ là tập điểm của $\mathbb{F}^2_p$ nằm trên đường cong $E$.
+
+    Điểm $P=(x,y) \in \mathbb{F}_p^2$ khi và chỉ khi, với mọi $a,b \in \mathbb{F}_p$, biểu thức được thỏa mãn:
+    \begin{equation}
+        y^2 \equiv x^3 + ax + b \pmod{p}
+    \end{equation}
+
+    $E(\mathbb{F}^2_p)$ là một nhóm abel với phép toán $+$ được định nghĩa ở trên.
+
+    $$ \mid G \mid = \mid E(\mathbb{F}^2_p) \mid = h \cdot k,$$
+    trong đó $k$ là số nguyên tố và là bậc của nhóm sinh bới $P$, $h$ nên nhỏ.
+\end{frame}
+
+\begin{frame}
+    \fontsize{10pt}{12pt}
+    \selectfont
+    \frametitle{Thuật toán tìm tham số đường cong trên trường $\mathbb{F}_p$}
+
+    \begin{algorithm}[H]
+        \Input {$p$}
+        \Output{$out = (p, a, b, P, k, h)$}
+        \Begin
+        {
+            1. Chọn ngẫu nhiên đường cong $E$, hay ngẫu nhiên $a,b$  \\
+            2. Dùng thuật toán Schoof để tìm bậc của $G$ \\
+            3. Tìm ước nguyên tố $k$ lớn của $\mid G \mid$. Đảm bảo $h$ đủ nhỏ và $k$ đủ lớn với $h \cdot k = \mid G \mid$ \\
+            4. \If{$k$ không đủ lớn}{
+                Trở lại bước 1, tìm đường cong mới.
+            }
+            5. Chọn ngẫu nhiên $P \in G$ và tính $kP$ bằng thuật toán nhân đôi và cộng. \\
+            6. \If{$kP \neq 1$}{
+                $k$ không phải bậc của nhóm con sinh bởi $P$, trở lại bước 6 tìm điểm $P$ khác.
+            }
+            7. \Return $(p, a, b, P, k, h)$
+        }
+        \caption{Tìm tham số đường cong}
+    \end{algorithm}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Một số đường cong đặc biệt}
+    \begin{itemize}
+        \item Đường cong Koblitz trên trường nhị phân:
+              $$ y^2 + xy = x^3 + ax^2 + 1 \text{ với } a \in \{0,1\} \text{ trên trường $GF(2^m)$} $$ với $m$ là số nguyên tố
+        \item Đường cong Weierstrass trên trường số nguyên tố:
+              $$ y^2 = x^3 + ax + b$$ với $a,b \in \mathbb{F}_p$
+              Được cho rằng đem lại hiệu quả bảo mật cao hơn đường Koblitz hay đường nhị phân dù chi phí tính toán tốn kém hơn.
+    \end{itemize}
+
+    NIST đã cung cấp một vài đường cong để sử dụng trong ECC. 3 trường $\mathbb{F}_p$ với các số $p$ cụ thể: $2^{607}-1, 2^{521}-1, 180*(2^{127}-1)^2+1$, với độ bảo mật tương ứng giảm dần.
+
+    % Các đường cong này cho phép tính toán một cách hiệu quả và có thể sử dụng trong thực tế. Nhưng tính bảo mật của những đường cong này có thể bị đe dọa
+\end{frame}
+\begin{frame}
+    \frametitle{Trao đổi khóa Diffe-Hellman}
+    % \fontsize{10pt}{12pt}
+    \begin{center}
+
+        \begin{tabular}{|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{Tạo tham số công khai}                              \\
+            \hline
+            \multicolumn{2}{|c|}{Cả hai chấp nhận cùng sử dụng $(p, a, b, P, k, h)$} \\
+            % \multicolumn{2}{|c|}{và một số nguyên $g$ có bậc nguyên tố lớn trong $\mathbb{F}^*_p$}                                        \\
+            \hline
+            \hline
+            \multicolumn{2}{|c|}{Thực hiện tính toán bí mật}                         \\
+            \hline
+            Alice                           & Bob                                    \\
+            \hline
+            Chọn bí mật một số nguyên $n_A$ & Chọn bí mật một số nguyên $n_B$        \\
+            Tính $Q_A = n_AP$               & Tính $Q_B = n_BP$                      \\
+            \hline
+            \hline
+            \multicolumn{2}{|c|}{Trao đổi giá trị công khai}                         \\
+            \hline
+            Alice gửi $Q_A$ cho Bob         & $\longrightarrow Q_A$                  \\
+            $Q_B \longleftarrow$            & Bob gửi $Q_B$ cho Alice                \\
+            \hline
+            \hline
+            \multicolumn{2}{|c|}{Tiếp tục thực hiện tính toán bí mật}                \\
+            \hline
+            Alice                           & Bob                                    \\
+            \hline
+            Tính $n_AQ_B \pmod{p}$          & Tính $n_BQ_A \pmod{p}$                 \\
+            \hline
+            \multicolumn{2}{|c|}{Khóa bí mật của cả hai là $n_An_BP$ }               \\
+            \hline
+        \end{tabular}
+
+    \end{center}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Chữ ký số}
+    \begin{center}
+        \fontsize{10pt}{12pt}
+
+        \begin{tabular}{|c|}
+            \hline
+            Alice muốn gửi tin nhắn $m$ cho Bob                      \\
+            \hline
+            Cả hai chấp nhận cùng sử dụng $(p, a, b, P, k, h)$       \\
+            \hline
+            $n_A$, $Q_A$ tương ứng là khóa bí mật và công khai Alice \\
+            \hline
+            \hline
+            Alice chọn một số $n$ làm khóa tạm thời                  \\
+            \hline
+            Alice tính $Q = nP$,                                     \\
+            đặt $r$ là tọa độ $x$ của điểm $Q$                       \\
+            Tính $s = n^{-1}(m+ rn_A)$                               \\
+            Gửi cặp ($r, s$) cho Bob                                 \\
+            $\longrightarrow$                                        \\
+            \hline
+            Bob tính $u_1 = s^{-1}m \pmod{k}$                        \\
+            $u_2 = s^{-1}r \pmod{k}$                                 \\
+            $Q = u_1P + u_2Q_A$                                      \\
+            kiểm tra nếu $r = x_Q$ thì đúng là Alice.                \\
+            \hline
+        \end{tabular}
+
+    \end{center}
+
+
+\end{frame}
+\section{Classical and Quantum attacks on ECC}
+\begin{frame}
+    \frametitle{Bài toán của Sony}
+    \begin{proposition}
+        \label{pro:4.1}
+        Nếu $n$ trong thuật toán chữ ký số không đổi, ta có thể khôi phục khóa bí mật từ chữ ký của Alice.
+    \end{proposition}
+    \begin{proof}
+        Ta có 2 bộ chữ ký của Alice là $(r_1, s_1)$ và $(r_2, s_2)$.
+        Vì $r = x_Q$ mà $Q = nP$, nên với $n$ không đổi, ta có $r_1 = r_2$.
+        Lại có;
+        $$ s_1 - s_2 = n^{-1}(m_1+rn_A) - n^{-1}(m_2+rn_A) = n^{-1}(m_1-m_2) \pmod{k}$$
+        nên $$ n = (m_1 - m_2)(s_1 - s_2)^{-1} \pmod{k}$$
+        Sau khi tính được $n$, ta tính được $$n_A = r^{-1}(s_1n-m_1) \pmod{k}$$
+    \end{proof}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tấn công Pollard Rho}
+
+    \begin{algorithm}[H]
+        \Input {$P, Q$}
+        \Output{$out = (a,b,c,d)$}
+        \Begin
+        {
+            Sinh ra dãy $S$, mỗi phần tử là một cặp $(a,b)$ \\
+            Khởi tạo con trỏ $it_1 = 0$ và $it_2 = 0$ \\
+            \While{$aP + bQ \neq cP + dQ$}
+            {
+                $it_1 \gets it_1 + 1$ \\
+                $it_2 \gets it_2 + 1$ \\
+                $(a,b) \gets S[it_1]$ \\
+                $(c,d) \gets S[it_2]$ \\
+            }
+
+            \Return $(a,b,c,d)$
+        }
+        \caption{Tìm chu trình của Floyd}
+    \end{algorithm}
+
+\end{frame}
+\begin{frame}
+    \frametitle{Tấn công Pollard Rho}
+
+    \begin{algorithm}[H]
+        \Input {$P, Q$}
+        \Output{$n$ thỏa mãn $nP = Q$}
+        \Begin
+        {
+            $(a,b,c,d) \gets Floyd(P,Q)$ \\
+            $n \gets (a-c)(d-b)^{-1}$ \\
+
+            \Return $n$
+        }
+        \caption{Pollard Rho}
+    \end{algorithm}
+    Độ phức tạp thời gian: $O(\sqrt{k})$ hoặc $2^{O(b)}$ với $b$ là số bit của $k$.
+\end{frame}
 \section{Conclusion}
 
 

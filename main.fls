@@ -1442,6 +1442,17 @@ INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\relsize\relsize.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\beamer\beamerouterthemeinfolines.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\beamer\beamerouterthemeinfolines.sty
 INPUT C:\Users\duchu\AppData\Roaming\MiKTeX\tex\latex\beamer\beamerouterthemeinfolines.sty
@@ -1771,6 +1782,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmssbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso10.tfm
 INPUT .\main.bbl
 INPUT main.bbl
 INPUT .\main.bbl
@@ -1781,10 +1795,10 @@ OUTPUT main.snm
 INPUT main.aux
 INPUT .\main.out
 INPUT .\main.out
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-t5.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
-INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\lm\lm-mathex.enc
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmex10.pfb
@@ -1814,6 +1828,8 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsso9.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy7.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\lm\lmsy9.pfb

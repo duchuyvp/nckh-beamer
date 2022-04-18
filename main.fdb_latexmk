@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1650074522 "main.aux" "main.bbl" "main" 1650074545
+["bibtex main"] 1650324580 "main.aux" "main.bbl" "main" 1650324667
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/apalike.bst" 1291972791 24635 604dafcc79f521a11ea73e506e1fbd98 ""
   "bibfile.bib" 1649986999 520 bc4b79cf152afe19ef26c0d83f2ac203 ""
-  "main.aux" 1650074543 6589 1129cf77d0acb032b42c5a1d9e6c5707 "pdflatex"
+  "main.aux" 1650324666 9285 ef9cac61f79930b3230d0fe7e75bc257 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1650074535 "c:/Users/duchu/Documents/University of Windsor/main.tex" "main.pdf" "main" 1650074545
+["pdflatex"] 1650324658 "c:/Users/duchu/Documents/University of Windsor/main.tex" "main.pdf" "main" 1650324667
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -65,6 +65,7 @@
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsso8.pfb" 1254938640 106860 a773e4958b589eadcc5b01a914624508 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsso9.pfb" 1254938640 106652 1c072e8708ea93130d7bdf564f626a12 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb" 1254938640 27863 09ce3735688ffde955e72da27c95b61a ""
+  "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb" 1254938640 27941 d1f5d03f61a46c3fcc3a2ba904ddda52 ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb" 1254938640 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy9.pfb" 1254938640 27835 e135c98a7736a509f536880c6a6e3bd9 ""
   "C:/Program Files/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -230,6 +231,7 @@
   "C:/Program Files/MiKTeX/tex/latex/pgfplots/pgfplots.sty" 1621075461 4904 ee78b44e85d6fccf08cd99370557481e ""
   "C:/Program Files/MiKTeX/tex/latex/tools/calc.sty" 1636710260 10214 00ce62e730d0cfe22b35e8f1c84949c7 ""
   "C:/Program Files/MiKTeX/tex/latex/tools/enumerate.sty" 1636710260 3468 068d84ef9735e15f11c5a120c0a1a139 ""
+  "C:/Program Files/MiKTeX/tex/latex/tools/multicol.sty" 1636710260 32262 2bb622a0aa56c4a7a5cbdfe9d122c15a ""
   "C:/Program Files/MiKTeX/tex/latex/tools/xspace.sty" 1636710260 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "C:/Program Files/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Program Files/MiKTeX/tex/latex/xcolor/svgnam.def" 1636284872 4701 9c94a851a756fcbe00f338a0e7fd92c9 ""
@@ -331,13 +333,13 @@
   "C:/Users/duchu/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.def" 1368738347 21986 ccb3b8f7cc27fbd61b3daabbbb82ad3f ""
   "C:/Users/duchu/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
   "UWin.jpeg" 1649912078 26636 268d37f21ad4823b1207d63b4e995f20 ""
-  "c:/Users/duchu/Documents/University of Windsor/main.tex" 1650074534 19165 5867c3eee44972a50fe03be24af62f58 ""
-  "main.aux" 1650074543 6589 1129cf77d0acb032b42c5a1d9e6c5707 "pdflatex"
-  "main.bbl" 1650074523 313 b5f02f1b99db6949efff526f43499a06 "bibtex main"
-  "main.nav" 1650074543 2808 cbc27d5ec5cf6a4d46560af2545b0b41 "pdflatex"
-  "main.out" 1650074543 664 e1b6397ccc125995376b62b312bfe553 "pdflatex"
-  "main.tex" 1650074534 19165 5867c3eee44972a50fe03be24af62f58 ""
-  "main.toc" 1650074543 336 9b730c7742c4bf5a4102a34caff88f2e "pdflatex"
+  "c:/Users/duchu/Documents/University of Windsor/main.tex" 1650324656 29632 6fee21197d6eb6e8459a0a90e490f78f ""
+  "main.aux" 1650324666 9285 ef9cac61f79930b3230d0fe7e75bc257 "pdflatex"
+  "main.bbl" 1650324580 313 b5f02f1b99db6949efff526f43499a06 "bibtex main"
+  "main.nav" 1650324666 4236 c480db085f46e5dd7f7b57bb8c650dca "pdflatex"
+  "main.out" 1650324666 1022 8136416374c1965a97e639e404e38d85 "pdflatex"
+  "main.tex" 1650324656 29632 6fee21197d6eb6e8459a0a90e490f78f ""
+  "main.toc" 1650324666 437 b58790633935874a46c7941a0855cd06 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
