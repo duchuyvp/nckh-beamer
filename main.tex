@@ -1,0 +1,444 @@
+\documentclass [xcolor=svgnames, t] {beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{booktabs, comment}
+\usepackage[absolute, overlay]{textpos}
+\usepackage{pgfpages}
+\usepackage[font=footnotesize]{caption}
+\usepackage{tikz}
+\usepackage[autostyle]{csquotes}
+\usepackage{amsmath}
+\usepackage[makeroom]{cancel}
+\usepackage{textpos}
+\usepackage{pgfplots}
+\usepackage[vietnamese]{babel}
+\usepackage[ruled]{algorithm2e}
+\usepackage{caption}
+
+\useoutertheme{infolines}
+
+\definecolor{gold}{RGB}{254, 206, 0}
+
+\setbeamercolor{title in head/foot}{bg=gold, fg=black}
+\setbeamercolor{author in head/foot}{bg=myuniversity}
+\setbeamertemplate{page number in head/foot}{}
+
+\pgfplotsset{compat=1.18}
+
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{decorations.pathreplacing,calligraphy}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{quotes}
+\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+
+\SetFuncSty{textsc}
+\SetDataSty{emph}
+\SetCommentSty{commentsty}
+\SetKwComment{Comment}{$\triangleright$ }{}
+\SetKwBlock{Block}{function}{}
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\SetKw{Return}{return}
+\SetKwData{Node}{node}
+\SetKwData{Leaf}{leaf}
+\SetKwFunction{Build}{build}
+\SetKwFunction{Variance}{variance}
+\SetKwFunction{Median}{median}
+\SetKwFunction{Split}{split}
+
+
+\usetheme{Madrid}
+\definecolor{myuniversity}{RGB}{0, 85, 150}
+\usecolortheme[named=myuniversity]{structure}
+
+
+\theoremstyle{definition}
+% \setcounter{MaxMatrixCols}{30}
+% \newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+% \newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+% \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+% \newtheorem{definition}{Definition}
+% \newtheorem{example}{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+% \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+% \newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}{Remark}
+% \newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+
+\title[RUNNING TITLE]{Đường cong Elliptic}
+\subtitle{(trước và sau quantum)}
+\institute[]{School of Computer Science  \\University of Windsor}
+\titlegraphic{\includegraphics[height=2.5cm]{UWin.jpeg}}
+\author[Main Author]{
+	Main Author ,
+	2nd Author,
+	3rd Author }
+
+
+\institute[]{School  of Computer Science  \\University of Windsor}
+\date{\today}
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\begin{document}
+\begin{frame}
+    \maketitle
+\end{frame}
+
+
+\logo{\includegraphics[scale=0.15]{UWin.jpeg}~%
+}
+
+
+
+
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction}
+    \begin{definition}
+        \label{define:1.1}
+        Ta định nghĩa bài toán logarit rời rạc trên một nhóm với phép nhân các số nguyên theo modulo $p$, $\mathbb{Z}_{/\mathbb{Z}_p}$, như sau:
+
+        Cho $g, a \in \mathbb{Z}_{/\mathbb{Z}_p}$, với $a$ là phần tử của nhóm cyclic có phần tử sinh $g$, tìm số nguyên $k$ thỏa mãn:
+        \begin{equation}
+            \label{equation:1.1}
+            g^k \equiv a \pmod{p}
+        \end{equation}
+    \end{definition}
+    \begin{definition}
+        \label<asdasdasd>{define:1.2}
+        Ta định nghĩa bài toán phân tích rời rạc như sau: Cho một số nguyên $N$, có ước là hai số nguyên tố lớn $p$ và $q$. Tìm $p$ và $q$.
+    \end{definition}
+\end{frame}
+\section{Preliminaries}
+\begin{frame}{Preliminaries}
+    \cite{Vishwanath10}
+    \begin{definition}
+        \label{define:2.1}
+        Một \textit{nhóm} là một cấu trúc đại số bao gồm:
+        \begin{itemize}
+            \item Một tập phần tử $G$
+            \item Một toán tử đóng $(\cdot)$ trên tập $G$ thỏa mãn tính chất kết hợp. Nghĩa là $(a \cdot b) \cdot c  = a \cdot (b \cdot c)$, với mọi $a, b, c \in G$.
+            \item Một phần tử đơn vị $1$, để $a \cdot 1 = a$ với mọi $a \in G$.
+            \item Tồn tại phần tử nghịch đảo $a^{-1} \in G$ nếu $a \in G$ để $a^{-1} \cdot a = 1$.
+        \end{itemize}
+
+        Một \textit{nhóm} thỏa mãn thêm điều kiện toán tử hai ngôi có thêm tính giao hoán (hay $a \cdot b = b \cdot a$) là nhóm giao hoán hoặc \textit{nhóm Abel}
+    \end{definition}
+\end{frame}
+\begin{frame}{Preliminaries}
+    \begin{example}
+        Với tập số nguyên $\mathbb{Z}$ được trang bị toán tử $+$ và xem số $0$ như phần tử đơn vị,
+        xem các cặp số nguyên có dấu ngược nhau là các cặp nghịch đảo, ta có một \textit{nhóm}.
+
+        Ngược lại, tập số tự nhiên $\mathbb{N}$ không phải một nhóm vì không định nghĩa được phần tử nghịch đảo.
+    \end{example}
+\end{frame}
+
+\begin{frame}{Preliminaries}
+    \begin{definition}
+        \label{define:2.2}
+        Cho nhóm $G$ được trang bị toán tử $(\cdot)$ với phần tử đơn vị $1$. Với mỗi $a \in G$, \textit{bậc} của $a$, là số nguyên $n$ nhỏ nhất thỏa mãn:
+        \begin{equation}
+            \label{equation:2.1}
+            \underbrace{a \cdot a \cdot a \cdot \ldots \cdot a}_{n} = 1
+        \end{equation}
+        Tập $\{a, a^2, a^3, a^4, \ldots, a^n\}$ là nhóm cyclic con của $G$ có bậc $n$, $a$ được gọi là \textit{phần tử sinh} của nhóm đó.
+    \end{definition}
+\end{frame}
+\begin{frame}{Preliminaries}
+    \begin{definition}
+        \label{define:2.3}
+        Một \textit{trường} là một cấu trúc đại số bao gồm:
+        \begin{itemize}
+            \item Tập $G$ là tập đóng dưới phép cộng và phép nhân.
+            \item Phép cộng và phép nhân phải có tính kết hợp trên tập $G$.
+            \item Phép cộng và phép nhân phải có tính giao hoán trên tập $G$.
+            \item Tồn tại phần tử nghịch đảo cho cả phép cộng và phép nhân.
+            \item Phép nhân có tính chất phân phối đối với phép cộng: $a \cdot (b + c) = (a \cdot b) + (a \cdot c)$.
+            \item Phần tử đơn vị của phép cộng và phép nhân phải khác nhau.
+        \end{itemize}
+    \end{definition}
+\end{frame}
+\begin{frame}{Preliminaries}
+    \begin{definition}
+        \textit{Tính đặc trưng} của trường $F$ là số $n$ nhỏ nhất thỏa mãn tổng của $n$ phần tử $1$ bằng $0$. Kí hiệu $char(F) = n$.
+    \end{definition}
+    \begin{example}
+        Nếu tính đặc trưng của $F$, $char(F)$, là 2 và phần tử đơn vị là $1$, thì $ 1 + 1 = 0 $.
+
+        Nếu $char(F) = 3$ thì $ 1 + 1 + 1 = 0 $.
+    \end{example}
+
+\end{frame}
+\begin{frame}{Preliminaries}
+    \begin{definition}
+        \textit{Trường Galois} là trường bao gồm một tập hữu hạn phần tử.
+    \end{definition}
+    \begin{example}
+        Tập số nguyên theo modulo số nguyên tố $p$, $\mathbb{Z}_{/\mathbb{Z_p}}$ là một trường Galois. Với $p$ phần tử, $0$ đến $p-1$,
+        kí hiệu $GF(p)$.
+    \end{example}
+    Phần còn lại, ta sẽ đề cập nhiều hơn đến trường của số nguyên tố $GF(p)$, tổng quát hơn là $GF(p^n)$.
+\end{frame}
+\section{Elliptic Curve Cryptography}
+\subsection{Basic}
+\begin{frame}{Basic}
+    \begin{definition}
+        % \label{define:3.1}
+        Một đường cong elliptic $E(F)$ là một tập điểm trên trường $F$, thỏa mãn phương trình có dạng:
+        \begin{equation}
+            \label{equation:3.1}
+            y^2 + a_1xy + a_2y = x^3 + a_3x^2 + a_4x + a_5
+        \end{equation}
+        Trong đó $a_1, a_2, a_3, a_4, a_5 \in F$.
+    \end{definition}
+    Nếu ta giả sử tính đặc trưng của $F$ khác 2, hay $ 1 + 1 = 2 \neq 0 $, phương trình có thể viết lại dưới dạng:
+    \begin{equation}
+        \label{equation:3.2}
+        y^2 = x^3 + a_3x^2 + a_4x + a_5
+    \end{equation}
+    Phương trình có thể rút gọn hơn nữa nếu tính đặc trưng của trường khác 3, ta được phương trình đơn giản hơn, được gọi là phương trình Weierstrass.
+    \begin{equation}
+        \label{equation:3.3}
+        y^2 = x^3 + ax + b \mid_{a=a_4, b = a_5}
+    \end{equation}
+
+\end{frame}
+\begin{frame}
+    \frametitle{Đồ thị}
+    \begin{figure}
+        \label{figure:1}
+        \caption{Đường cong Elliptic $E$ trên $\mathbb{R}^2$}
+        \begin{tikzpicture}[scale = 0.6, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                    x=1cm,y=1cm,
+                    axis lines=middle,
+                    xmin=-5.912600967627929,
+                    xmax=5.112504977805202,
+                    ymin=-5.000000419005899,
+                    ymax=5.000000419005899,
+                    legend pos=north west,
+                    xticklabels={,,},
+                    yticklabels={,,},
+                    % xtick={-5,-4,...,5},
+                    % ytick={-5,-4,...,5},
+                ]
+                \clip(-5.912600967627929,-5.000000419005899) rectangle (10.112504977805202,5.000000419005899);
+                \draw[line width=0.5pt,color=blue,smooth,samples=100,domain=-2.1038033040947663:10.112504977805202] plot(\x,{sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw[line width=0.5pt,color=blue,smooth,samples=100,domain=-2.1038033040947663:10.112504977805202] plot(\x,{0-sqrt(abs((\x)^(3)-3*(\x)+3))});
+                % \legend{$E: y^2 = x^3 -3x + 3$}
+                \addlegendimage{line width=0.3mm, color=blue}
+                \addlegendentry{$E: y^2 = x^3 -3x + 3$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Đồ thị}
+    \begin{figure}
+        \label{figure:2}
+        \caption{Cộng hai điểm $P$ và $Q$ trên $E$}
+        \begin{tikzpicture}[scale = 0.6, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                    x=1cm,y=1cm,
+                    axis lines=middle,
+                    xmin=-5.912600967627929,
+                    xmax=5.112504977805202,
+                    ymin=-5.000000419005899,
+                    ymax=5.000000419005899,
+                    legend pos=north west,
+                    xticklabels={,,},
+                    yticklabels={,,},
+                    % xtick={-5,-4,...,5},
+                    % ytick={-5,-4,...,5},
+                ]
+                \clip(-5.736430725533388,-5.733053262983473) rectangle (5.923722428745249,5.872549467181578);
+                \draw[line width=0.5pt,color=blue,smooth,samples=100,domain=-2.103803291543122:5.923722428745249] plot(\x,{sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw[line width=0.5pt,color=blue,smooth,samples=100,domain=-2.103803291543122:5.923722428745249] plot(\x,{0-sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw [line width=0.5pt,domain=-5.736430725533388:5.923722428745249] plot(\x,{(--2.3486301286669415-0.40680839258599555*\x)/1.3559822370127241});
+                \draw [line width=0.2pt,dotted] (1.4459883083356893,-1.9982396827947813)-- (1.4459883083356893,1.9982396827947813);
+                \begin{scriptsize}
+                    \draw[color=black] (-1.9451762496392822,0.28794979855338965) node {$E$};
+                    \draw [fill=black] (0,1.7320508075688772) circle (1.5pt);
+                    \draw[color=black] (0.2232031088756924,1.9926505521028977) node {$Q$};
+                    \draw [fill=black] (-1.3559822370127241,2.1388592001548727) circle (1.5pt);
+                    \draw[color=black] (-1.1405574939639143,2.4017787329547793) node {$P$};
+                    \draw[color=black] (-5.463678604965468,2.8700487609709) node {$L$};
+                    \draw [fill=black] (1.4459883083356893,1.2982396827947813) circle (1.5pt);
+                    \draw[color=black] (1.777890196112844,1.5698847652226198) node {$\ -R$};
+                    \draw [fill=black] (1.4459883083356893,-1.2982396827947813) circle (1.5pt);
+                    \draw[color=black] (2.4324952854758553,-1.0348979862010284) node {$R$};
+                \end{scriptsize}
+                \addlegendimage{line width=0.3mm, color=blue}
+                \addlegendentry{$E: y^2 = x^3 -3x + 3$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Đồ thị}
+    \begin{figure}
+        % \label{figure:2}
+        \caption{Cộng hai điểm $P$ và $P$ trên $E$}
+        \begin{tikzpicture}[scale = 0.55, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                    x=1cm,y=1cm,
+                    axis lines=middle,
+                    xmin=-6.912600967627929,
+                    xmax=6.112504977805202,
+                    ymin=-6.000000419005899,
+                    ymax=5.900000419005899,
+                    legend pos=north west,
+                    xticklabels={,,},
+                    yticklabels={,,},
+                    % xtick={-5,-4,...,5},
+                    % ytick={-5,-4,...,5},
+                ]
+                \clip(-5.736430725533388,-5.733053262983473) rectangle (5.923722428745249,5.872549467181578);
+                \draw[line width=0.8pt,color=blue,smooth,samples=100,domain=-2.103803291543122:5.923722428745249] plot(\x,{sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw[line width=0.8pt,color=blue,smooth,samples=100,domain=-2.103803291543122:5.923722428745249] plot(\x,{0-sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw [line width=0.8pt,domain=-5.736430725533388:5.923722428745249] plot(\x,{(-0.011820467984078764-0.0023798531917433863*\x)/-0.0040177629872759635});
+                \draw [line width=0.8pt,dotted] (3.06684049847989,-5.458642606222206)-- (3.06684049847989,5.458642606222206);
+                \begin{scriptsize}
+                    % \draw[color=black] (-1.9451762496392822,0.28794979855338965) node {$E$};
+                    \draw [fill=black] (-1.36,2.1364793469631294) circle (2pt);
+                    \draw [fill=black] (-1.3559822370127241,2.1388592001548727) circle (2pt);
+                    \draw[color=black] (-1.2405574939639143,2.4017787329547793) node {$P$};
+                    % \draw[color=black] (-5.463678604965468,-0.10754077627009614) node {$L$};
+                    \draw [fill=black] (3.06684049847989,4.758642606222206) circle (2pt);
+                    \draw[color=black] (3.400765313491976,4.520199090406824) node {$\ -R$};
+                    \draw [fill=black] (3.06684049847989,-4.758642606222206) circle (2pt);
+                    \draw[color=black] (4.0553704028549875,-4.4988499174136285) node {$R$};
+                \end{scriptsize}
+                \addlegendimage{line width=0.3mm, color=blue}
+                \addlegendentry{$E: y^2 = x^3 -3x + 3$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Đồ thị}
+    \begin{figure}
+        % \label{figure:2}
+        \caption{Cộng hai điểm $P$ và $-P$ trên $E$}
+        \begin{tikzpicture}[scale = 0.55, line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            \begin{axis}[
+                    x=1cm,y=1cm,
+                    axis lines=middle,
+                    xmin=-6.912600967627929,
+                    xmax=6.112504977805202,
+                    ymin=-6.000000419005899,
+                    ymax=5.900000419005899,
+                    legend pos=north west,
+                    xticklabels={,,},
+                    yticklabels={,,},
+                    % xtick={-5,-4,...,5},
+                    % ytick={-5,-4,...,5},
+                ]
+                \clip(-5.083985307432931,-5.419798893648197) rectangle (4.940270977414931,5.225844038096666);
+                \draw[line width=0.8pt,color=blue,smooth,samples=100,domain=-2.103803385261131:4.940270977414931] plot(\x,{sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw[line width=0.8pt,color=blue,smooth,samples=100,domain=-2.103803385261131:4.940270977414931] plot(\x,{0-sqrt(abs((\x)^(3)-3*(\x)+3))});
+                \draw [->,line width=0.8pt] (-1.3559822370127241,-5.8388592001548725) -- (-1.3559822370127241,5.138859200154872);
+                \begin{scriptsize}
+                    % \draw[color=black] (-1.9653277965913738,0.24888872474237672) node {$E$};
+                    \draw [fill=black] (-1.3559822370127241,2.1388592001548727) circle (2pt);
+                    \draw[color=black] (-1.0929001609366532,2.409827452774213) node {$P$};
+                    \draw [fill=black] (-1.3559822370127241,-2.1388592001548727) circle (2pt);
+                    \draw[color=black] (-1.0929001609366532,-2.409827452774213) node {$-P$};
+                    \draw[color=black] (-0.7460030555104643,5.020669201857089) node {$\mathcal{O}$};
+                    % \draw[color=black] (-1.1680770043461637,1.292349320475078) node {$\ L$};
+                \end{scriptsize}
+                \addlegendimage{line width=0.3mm, color=blue}
+                \addlegendentry{$E: y^2 = x^3 -3x + 3$}
+            \end{axis}
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tính $P+Q$ nếu $P(x_1,y_1)$ và $Q(x_2,y_2)$ phân biệt  }
+    Để sau
+
+
+\end{frame}
+\begin{frame}
+    \frametitle{Tính $P+Q$ nếu $P(x_1,y_1)$ và $Q(x_2,y_2)$ phân biệt  }
+    Sử dụng phép cộng này, ta định nghĩa phép \textit{nhân vô hướng} trên nhóm $G$
+    \begin{definition}
+        Phép \textit{nhân vô hướng} trên nhóm $G$ là phép cộng một điểm nhiều lần.
+        \begin{equation}
+            nP = \underbrace{P+P+ \ldots +P}_{n}
+        \end{equation}
+    \end{definition}
+\end{frame}
+\begin{frame}
+    \frametitle{Thuật toán nhân đôi và cộng}
+
+    \begin{algorithm}[H]
+        \Input {$n, P$}
+        \Output{$R = nP$}
+        \Begin
+        {
+            $Q \gets P$ \\
+            $E \gets \mathcal{O}$ \\
+            \While{$n>0$}
+            {
+                \eIf{$n \equiv 1 \pmod{2}$}
+                {
+                    $R \gets R + Q$
+                }
+                {
+                    $R \gets R + Q$ \\
+                    $Q \gets 2 \cdot Q$ \\
+                    $n \gets \lfloor \frac{n}{2} \rfloor $
+                }
+            }
+
+            \Return $R$
+        }
+        \caption{Nhân đôi và cộng}
+    \end{algorithm}
+
+\end{frame}
+\section{Experiment}
+
+\section{Conclusion}
+
+
+\begin{frame} [allowframebreaks]\frametitle{References}
+
+    \bibliographystyle{apalike}
+    \bibliography{bibfile}
+\end{frame}
+
+\end{document}
