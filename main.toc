@@ -1,8 +1,10 @@
 \babel@toc {vietnamese}{}\relax 
 \beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Preliminaries}{4}{0}{2}
-\beamer@sectionintoc {3}{Elliptic Curve Cryptography}{10}{0}{3}
-\beamer@subsectionintoc {3}{1}{Basic}{10}{0}{3}
+\beamer@sectionintoc {2}{Kiến thức cơ bản}{4}{0}{2}
+\beamer@sectionintoc {3}{Mật mã đường cong Elliptic}{10}{0}{3}
+\beamer@subsectionintoc {3}{1}{Cơ bản}{10}{0}{3}
 \beamer@subsectionintoc {3}{2}{Logarit rời rạc và mã hóa}{19}{0}{3}
 \beamer@sectionintoc {4}{Classical and Quantum attacks on ECC}{26}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{29}{0}{5}
+\beamer@sectionintoc {5}{Thuật toán Shor}{29}{0}{5}
+\beamer@sectionintoc {6}{Ánh xạ đường cong kỳ dị}{30}{0}{6}
+\beamer@sectionintoc {7}{Kết luận}{34}{0}{7}

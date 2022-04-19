@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1650324580 "main.aux" "main.bbl" "main" 1650324667
+["bibtex main"] 1650394955 "main.aux" "main.bbl" "main" 1650395155
   "C:/Program Files/MiKTeX/bibtex/bst/bibtex/apalike.bst" 1291972791 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "bibfile.bib" 1649986999 520 bc4b79cf152afe19ef26c0d83f2ac203 ""
-  "main.aux" 1650324666 9285 ef9cac61f79930b3230d0fe7e75bc257 "pdflatex"
+  "bibfile.bib" 1650394332 993 73b7626ed1d9e03ab843447150284def ""
+  "main.aux" 1650395154 11147 3aa05c593055086d938021d19215c477 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1650324658 "c:/Users/duchu/Documents/University of Windsor/main.tex" "main.pdf" "main" 1650324667
+["pdflatex"] 1650395143 "c:/Users/duchu/Documents/University of Windsor/main.tex" "main.pdf" "main" 1650395155
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc" 1254938640 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc" 1254938640 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc" 1254938640 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -332,14 +332,14 @@
   "C:/Users/duchu/AppData/Roaming/MiKTeX/tex/latex/vntex/t5cmr.fd" 1368738347 1333 ab1c3d512aa3d88df568aed3641db58f ""
   "C:/Users/duchu/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.def" 1368738347 21986 ccb3b8f7cc27fbd61b3daabbbb82ad3f ""
   "C:/Users/duchu/AppData/Roaming/MiKTeX/tex/latex/vntex/t5enc.dfu" 1368738347 13949 387dd4fa58aea5f873839c93430fffed ""
-  "UWin.jpeg" 1649912078 26636 268d37f21ad4823b1207d63b4e995f20 ""
-  "c:/Users/duchu/Documents/University of Windsor/main.tex" 1650324656 29632 6fee21197d6eb6e8459a0a90e490f78f ""
-  "main.aux" 1650324666 9285 ef9cac61f79930b3230d0fe7e75bc257 "pdflatex"
-  "main.bbl" 1650324580 313 b5f02f1b99db6949efff526f43499a06 "bibtex main"
-  "main.nav" 1650324666 4236 c480db085f46e5dd7f7b57bb8c650dca "pdflatex"
-  "main.out" 1650324666 1022 8136416374c1965a97e639e404e38d85 "pdflatex"
-  "main.tex" 1650324656 29632 6fee21197d6eb6e8459a0a90e490f78f ""
-  "main.toc" 1650324666 437 b58790633935874a46c7941a0855cd06 "pdflatex"
+  "HUS (1).png" 1650384857 104174 ebbd3fa384a84c158762d30a9071c3a8 ""
+  "c:/Users/duchu/Documents/University of Windsor/main.tex" 1650395141 39585 f784a52719709b5e1fa8da463d3e4a55 ""
+  "main.aux" 1650395154 11147 3aa05c593055086d938021d19215c477 "pdflatex"
+  "main.bbl" 1650394956 856 b656c8bf23849e0bc95282f7a61461e5 "bibtex main"
+  "main.nav" 1650395154 5242 ee1cf9b83e7fe2b2b8480a2ec327370d "pdflatex"
+  "main.out" 1650395154 1411 da6600ba504b0f0ede8d3afb179e41bc "pdflatex"
+  "main.tex" 1650395141 39585 f784a52719709b5e1fa8da463d3e4a55 ""
+  "main.toc" 1650395154 585 6d6ff755dded171d666c6c6a0973d662 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

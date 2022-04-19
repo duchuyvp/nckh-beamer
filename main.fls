@@ -1698,19 +1698,6 @@ INPUT main.nav
 INPUT main.nav
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss8.tfm
-INPUT .\UWin.jpeg
-INPUT .\UWin.jpeg
-INPUT UWin.jpeg
-INPUT .\UWin.jpeg
-INPUT .\UWin.jpeg
-INPUT .\UWin.jpeg
-INPUT .\UWin.jpeg
-INPUT C:\Users\duchu\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
-INPUT .\main.toc
-INPUT main.toc
-INPUT main.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
@@ -1749,7 +1736,14 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss8.tfm
+INPUT .\HUS (1).png
+INPUT .\HUS (1).png
+INPUT HUS (1).png
+INPUT .\HUS (1).png
+INPUT .\HUS (1).png
+INPUT .\HUS (1).png
+INPUT .\HUS (1).png
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm
@@ -1763,6 +1757,12 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmsso8.tfm
+INPUT C:\Users\duchu\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\main.toc
+INPUT main.toc
+INPUT main.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmss12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\t5-lmsso10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmss8.tfm

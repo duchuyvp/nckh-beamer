@@ -1,9 +1,24 @@
 \begin{thebibliography}{}
 
-\bibitem[Vishwanath and Nagappan, 2010]{Vishwanath10}
-Vishwanath, K.~V. and Nagappan, N. (2010).
-\newblock Characterizing cloud computing hardware reliability.
-\newblock SoCC '10, pages 193--204, New York, NY, USA. Association for
-  Computing Machinery.
+\bibitem[Fildes, 2011]{fildes2011iphone}
+Fildes, J. (2011).
+\newblock iphone hacker publishes secret sony playstation 3 key.
+\newblock {\em BBC News}, 6.
+
+\bibitem[Proos and Zalka, 2003]{proos2003shor}
+Proos, J. and Zalka, C. (2003).
+\newblock Shor's discrete logarithm quantum algorithm for elliptic curves.
+\newblock {\em arXiv preprint quant-ph/0301141}.
+
+\bibitem[Schoof, 1995]{schoof1995counting}
+Schoof, R. (1995).
+\newblock Counting points on elliptic curves over finite fields.
+\newblock {\em Journal de th{\'e}orie des nombres de Bordeaux}, 7(1):219--254.
+
+\bibitem[Shor, 1999]{shor1999polynomial}
+Shor, P.~W. (1999).
+\newblock Polynomial-time algorithms for prime factorization and discrete
+  logarithms on a quantum computer.
+\newblock {\em SIAM review}, 41(2):303--332.
 
 \end{thebibliography}

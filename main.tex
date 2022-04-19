@@ -84,14 +84,14 @@
 \title[RUNNING TITLE]{Đường cong Elliptic}
 \subtitle{(trước và sau quantum)}
 \institute[]{School of Computer Science  \\University of Windsor}
-\titlegraphic{\includegraphics[height=2.5cm]{UWin.jpeg}}
-\author[Main Author]{
-	Main Author ,
-	2nd Author,
-	3rd Author }
+\titlegraphic{\includegraphics[height=2.5cm]{HUS (1).png}}
+\author[Nguyễn Đức Huy]{
+	Nguyễn Đức Huy \thanks{Khoa Toán Cơ Tin học},
+	Lê Thị Thùy Dung,
+	Lưu Hiểu Huy}
 
 
-\institute[]{School  of Computer Science  \\University of Windsor}
+\institute[]{Đại học Khoa học Tự Nhiên  \\Khoa Toán Cơ Tin học}
 \date{\today}
 
 
@@ -121,7 +121,7 @@
 \end{frame}
 
 \section{Introduction}
-\begin{frame}{Introduction}
+\begin{frame}{Giới thiệu}
     \begin{definition}
         \label{define:1.1}
         Ta định nghĩa bài toán logarit rời rạc trên một nhóm với phép nhân các số nguyên theo modulo $p$, $\mathbb{Z}_{/\mathbb{Z}_p}$, như sau:
@@ -137,9 +137,8 @@
         Ta định nghĩa bài toán phân tích rời rạc như sau: Cho một số nguyên $N$, có ước là hai số nguyên tố lớn $p$ và $q$. Tìm $p$ và $q$.
     \end{definition}
 \end{frame}
-\section{Preliminaries}
-\begin{frame}{Preliminaries}
-    \cite{Vishwanath10}
+\section{Kiến thức cơ bản}
+\begin{frame}{Kiến thức cơ bản}
     \begin{definition}
         \label{define:2.1}
         Một \textit{nhóm} là một cấu trúc đại số bao gồm:
@@ -153,7 +152,7 @@
         Một \textit{nhóm} thỏa mãn thêm điều kiện toán tử hai ngôi có thêm tính giao hoán (hay $a \cdot b = b \cdot a$) là nhóm giao hoán hoặc \textit{nhóm Abel}
     \end{definition}
 \end{frame}
-\begin{frame}{Preliminaries}
+\begin{frame}{Kiến thức cơ bản}
     \begin{example}
         Với tập số nguyên $\mathbb{Z}$ được trang bị toán tử $+$ và xem số $0$ như phần tử đơn vị,
         xem các cặp số nguyên có dấu ngược nhau là các cặp nghịch đảo, ta có một \textit{nhóm}.
@@ -162,7 +161,7 @@
     \end{example}
 \end{frame}
 
-\begin{frame}{Preliminaries}
+\begin{frame}{Kiến thức cơ bản}
     \begin{definition}
         \label{define:2.2}
         Cho nhóm $G$ được trang bị toán tử $(\cdot)$ với phần tử đơn vị $1$. Với mỗi $a \in G$, \textit{bậc} của $a$, là số nguyên $n$ nhỏ nhất thỏa mãn:
@@ -173,7 +172,7 @@
         Tập $\{a, a^2, a^3, a^4, \ldots, a^n\}$ là nhóm cyclic con của $G$ có bậc $n$, $a$ được gọi là \textit{phần tử sinh} của nhóm đó.
     \end{definition}
 \end{frame}
-\begin{frame}{Preliminaries}
+\begin{frame}{Kiến thức cơ bản}
     \begin{definition}
         \label{define:2.3}
         Một \textit{trường} là một cấu trúc đại số bao gồm:
@@ -187,7 +186,7 @@
         \end{itemize}
     \end{definition}
 \end{frame}
-\begin{frame}{Preliminaries}
+\begin{frame}{Kiến thức cơ bản}
     \begin{definition}
         \textit{Tính đặc trưng} của trường $F$ là số $n$ nhỏ nhất thỏa mãn tổng của $n$ phần tử $1$ bằng $0$. Kí hiệu $char(F) = n$.
     \end{definition}
@@ -198,7 +197,7 @@
     \end{example}
 
 \end{frame}
-\begin{frame}{Preliminaries}
+\begin{frame}{Kiến thức cơ bản}
     \begin{definition}
         \textit{Trường Galois} là trường bao gồm một tập hữu hạn phần tử.
     \end{definition}
@@ -208,9 +207,9 @@
     \end{example}
     Phần còn lại, ta sẽ đề cập nhiều hơn đến trường của số nguyên tố $GF(p)$, tổng quát hơn là $GF(p^n)$.
 \end{frame}
-\section{Elliptic Curve Cryptography}
-\subsection{Basic}
-\begin{frame}{Basic}
+\section{Mật mã đường cong Elliptic}
+\subsection{Cơ bản}
+\begin{frame}{Cơ bản}
     \begin{definition}
         % \label{define:3.1}
         Một đường cong elliptic $E(F)$ là một tập điểm trên trường $F$, thỏa mãn phương trình có dạng:
@@ -263,7 +262,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Đồ thị}
+    \frametitle{Phép cộng}
     \begin{figure}
         \label{figure:2}
         \caption{Cộng hai điểm $P$ và $Q$ trên $E$}
@@ -306,7 +305,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Đồ thị}
+    \frametitle{Phép cộng}
     \begin{figure}
         % \label{figure:2}
         \caption{Cộng hai điểm $P$ và $P$ trên $E$}
@@ -348,7 +347,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Đồ thị}
+    \frametitle{Phép cộng}
     \begin{figure}
         % \label{figure:2}
         \caption{Cộng hai điểm $P$ và $-P$ trên $E$}
@@ -388,12 +387,26 @@
 
 \begin{frame}
     \frametitle{Tính $P+Q$ nếu $P(x_1,y_1)$ và $Q(x_2,y_2)$ phân biệt  }
-    Để sau
+    Cho
+    $$E:Y^2 = X^3 + AX + B$$
+    là một đường cong elliptic và $P$  và $Q$ là hai điểm trên $E$.
+    \begin{itemize}
+        \item Nếu $P = \mathcal{O}$ thì $P + Q = Q$.
+        \item Ngược lại, nếu $Q = \mathcal{O}$ thì $P + Q = P$.
+        \item Nếu $x_1 = x_2$ và $y_1 = -y_2$ thì $P + Q = \mathcal{O}$.
+        \item Nếu không, định nghĩa $\lambda$ bởi
+              $$ \lambda = \begin{cases}
+                      \frac{y_2-y_1}{x_2 - x_1} & \text{nếu } P \neq Q \\
+                      \frac{3x_1^2 + A}{2y_1}   & \text{nếu } P = Q.
+                  \end{cases} $$
+              Và ta có $P + Q = (x_3, y_3)$, trong đó:
+              $$x_3 = \lambda^2 - x_1 - x_2 \ \ \  \text{ và } \ \ \  y_3 = \lambda(x_1 - x_3) - y_1.$$
+    \end{itemize}
 
 
 \end{frame}
 \begin{frame}
-    \frametitle{Tính $P+Q$ nếu $P(x_1,y_1)$ và $Q(x_2,y_2)$ phân biệt  }
+    \frametitle{Phép nhân}
     Sử dụng phép cộng này, ta định nghĩa phép \textit{nhân vô hướng} trên nhóm $G$
     \begin{definition}
         Phép \textit{nhân vô hướng} trên nhóm $G$ là phép cộng một điểm nhiều lần.
@@ -432,18 +445,18 @@
 
 \end{frame}
 
-\begin{frame}{Frame Title}
+\begin{frame}{Định lý Lagrange}
     \begin{corollary}
         Vì $nP + mP = \underbrace{P+P+P+\ldots+P}_{n} + \underbrace{P+P+P+\ldots+P}_{m} = (n+m)P$
         nên khi cộng 2 bội của $P$ ta thu được bội khác của $P$. Tập hợp các bội của $P$ là một nhóm cyclic với bậc $k$, trong đó $P$ là phần tử sinh.
     \end{corollary}
     \begin{theorem}[Định lý Lagrange]
-        Nếu $H$ là nhóm con của nhóm hữu hạn $G$, thì bậc (số phần tử) của $G$ chia hết cho bậc của $H$.
+        Nếu $H$ là nhóm con của nhóm hữu hạn $G$, thì bậc (số phần tử) của $H$ là ước của bậc của $G$.
     \end{theorem}
     \begin{corollary}
-        Nếu bậc của nhóm hữu hạn $G$ là số nguyên tố $p$ thì bậc của nhóm con $H$ là $1$ hoặc $p$.
+        Nếu bậc của nhóm hữu hạn $G$ là số nguyên tố $p$ thì bậc của  $H$ là $1$ hoặc $p$.
 
-        Nếu bậc của $H$ là $p$, mọi điểm thuộc $G$ đều là phần tử sinh của nhóm con $H$
+        Nếu bậc của $H$ là $p$, mọi điểm thuộc $G$ đều là phần tử sinh của $H$
     \end{corollary}
 \end{frame}
 \subsection{Logarit rời rạc và mã hóa}
@@ -491,7 +504,9 @@
     $E(\mathbb{F}^2_p)$ là một nhóm abel với phép toán $+$ được định nghĩa ở trên.
 
     $$ \mid G \mid = \mid E(\mathbb{F}^2_p) \mid = h \cdot k,$$
-    trong đó $k$ là số nguyên tố và là bậc của nhóm sinh bới $P$, $h$ nên nhỏ.
+    trong đó $k$ là số nguyên tố và là bậc của nhóm sinh bới $P$.
+
+    Để sử dụng $E$ trong mã hóa, thường $h \leq 4$ .
 \end{frame}
 
 \begin{frame}
@@ -505,7 +520,7 @@
         \Begin
         {
             1. Chọn ngẫu nhiên đường cong $E$, hay ngẫu nhiên $a,b$  \\
-            2. Dùng thuật toán Schoof để tìm bậc của $G$ \\
+            2. Dùng thuật toán Schoof \cite{schoof1995counting} để tìm bậc của $G$ \\
             3. Tìm ước nguyên tố $k$ lớn của $\mid G \mid$. Đảm bảo $h$ đủ nhỏ và $k$ đủ lớn với $h \cdot k = \mid G \mid$ \\
             4. \If{$k$ không đủ lớn}{
                 Trở lại bước 1, tìm đường cong mới.
@@ -611,7 +626,7 @@
 \end{frame}
 \section{Classical and Quantum attacks on ECC}
 \begin{frame}
-    \frametitle{Bài toán của Sony}
+    \frametitle{Bài toán của Sony \cite{fildes2011iphone}}
     \begin{proposition}
         \label{pro:4.1}
         Nếu $n$ trong thuật toán chữ ký số không đổi, ta có thể khôi phục khóa bí mật từ chữ ký của Alice.
@@ -627,7 +642,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tấn công Pollard Rho}
+    \frametitle{Thuật toán Pollard Rho}
 
     \begin{algorithm}[H]
         \Input {$P, Q$}
@@ -651,7 +666,7 @@
 
 \end{frame}
 \begin{frame}
-    \frametitle{Tấn công Pollard Rho}
+    \frametitle{Thuật toán Pollard Rho}
 
     \begin{algorithm}[H]
         \Input {$P, Q$}
@@ -667,9 +682,171 @@
     \end{algorithm}
     Độ phức tạp thời gian: $O(\sqrt{k})$ hoặc $2^{O(b)}$ với $b$ là số bit của $k$.
 \end{frame}
-\section{Conclusion}
+\section{Thuật toán Shor}
+\begin{frame}
+    \frametitle{Thuật toán Shor đối với bài toán logarit rời rạc}
+    Giả sử ta có $g^r \equiv x \pmod{p}$, cần tìm $r$.
+
+    Ta định nghĩa hàm $f: \mathbb{Z}_p  \times \mathbb{Z}_p \rightarrow \mathbb{Z}_p$ như sau:
+    $$ f(a,b) = g^ax^{-b} \pmod{p} $$
+
+    Đầu ra của QFT là cặp $(c,d)$ thỏa mãn $$d+rc \equiv 0 \pmod{p-1}.$$
+    Khi tìm được $c$ thỏa mãn $\gcd(c, p-1) = 1$
+    ta thu được $$r = -dc^{-1} \pmod{p-1}$$
+
+    Áp dụng tương tự đối với đường cong elliptic với phép cộng và nhân vô hướng.
+    Tham khảo \cite{proos2003shor}, \cite{shor1999polynomial}
+\end{frame}
+\section{Ánh xạ đường cong kỳ dị}
+
+\begin{frame}
+    \frametitle{Cơ bản}
+    \begin{definition}
+        Trên trường cụ thể, đường cong kỳ dị không có điểm nào có bậc $p$, cụ thể đường cong có $p \pm 1$ điểm. Những đường cong này có vành tự đồng cấu lớn.
+    \end{definition}
+    \begin{definition}
+        Một \textit{isogeny} là một ánh xạ biến đường cong $E$ thành $E'$ sao cho $\mid E \mid = \mid E' \mid$.
+    \end{definition}
+    \begin{definition}
+        $j$-invarient của đường cong $E$, ký hiệu $j(E)$. Đối với $E: y^2 = x^3 + ax + b$, giá trị của $j(E)$ là
+        $$j(E) = 1728\frac{4a^3}{4a^3+27b^2}$$
+    \end{definition}
+\end{frame}
+\begin{frame}
+    \frametitle{Trao đổi khóa}
+    Một vài thông tin cần được công khai trước:
+    \begin{itemize}
+        \item Số nguyên tố $p = a^eb^d \pm 1$, $a, b$ là các số nguyên tố, $e,d \in \mathbb{F}_p$ là các số nguyên tùy ý.
+        \item Đường cong kỳ dị $E$ trên $\mathbb{F}_p^2$
+        \item Điểm $P_A, Q_A, P_B, Q_B \in E$ thỏa mãn bậc của $P_A, Q_A$ là $a^e$ và bậc của $P_B, Q_B$ là $b^d$.
+    \end{itemize}
 
 
+\end{frame}
+\begin{frame}
+    \frametitle{Trao đổi khóa}
+
+    \begin{center}
+        \small
+        \begin{tabular}{|c|c|}
+            \hline
+            \multicolumn{2}{|c|}{Tạo tham số công khai}                                                                  \\
+            \hline
+            \hline
+            Alice chọn 2 số $m_a, n_a < a^e$                     & Bob chọn 2 số $m_b, n_b < b^d$                        \\
+            \hline
+            Alice tính $R_A =  m_aP_A+ n_aQ+A$                   & Bob tính $R_B = m_bP_B+ n_bQ_B$                       \\
+            \hline
+            $\phi_A = E/\langle R_A\rangle $                     & $\phi_B = E/\langle R_B\rangle $                      \\
+            \hline
+            \hline
+            \multicolumn{2}{|c|}{Trao đổi giá trị công khai}                                                             \\
+            \hline
+            Alice gửi $\phi_A(E), \phi_A(P_A), \phi_A(Q_A)$      & $\longrightarrow \phi_A(E), \phi_A(P_A), \phi_A(Q_A)$ \\
+            $\phi_B(E), \phi_B(P_B), \phi_B(Q_B) \longleftarrow$ & Bob gửi $\phi_B(E), \phi_B(P_B), \phi_B(Q_B)$         \\
+            \hline
+            \hline
+            \multicolumn{2}{|c|}{Tiếp tục thực hiện tính toán bí mật}                                                    \\
+            \hline
+            Alice                                                & Bob                                                   \\
+            \hline
+            Tính $S_A = m_a \phi_B(P_B)+n_a\phi_B(Q_B)$          & Tính $S_B = m_b \phi_A(P_A)+n_b\phi_A(Q_A)$           \\
+            \hline
+            $\psi_A =(\phi_A(E))/\langle S_A\rangle $            & $\psi_B =(\phi_B(E))/\langle S_B\rangle $             \\
+            \hline
+            \multicolumn{2}{|c|}{Khóa bí mật của cả hai là $j(\psi_A(E)) = j(\psi_B(E))$ }                               \\
+            \hline
+        \end{tabular}
+
+    \end{center}
+
+
+\end{frame}
+\begin{frame}
+    \frametitle{Mô hình đề xuất}
+
+    \begin{figure}[H]
+        \centering
+        \definecolor{ttttff}{rgb}{0.2,0.2,1}
+        \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+        \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+        \definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
+        \begin{tikzpicture}[scale = 0.3,line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+            % \clip(-17.98185,-10.32857635110805) rectangle (10.391288726921678,11.160747688008888);
+            \draw [line width=0.5pt] (-13,0)-- (-11,0);
+            \draw [line width=0.5pt] (-9,0)-- (-4,6.5);
+            \draw [line width=0.5pt] (-9,0)-- (-4,3.5);
+            \draw [line width=0.5pt] (-9,0)-- (-4,0.5);
+            \draw [line width=0.5pt] (-9,0)-- (-4,-2.5);
+            \draw [line width=0.5pt] (-9,0)-- (-4,-5.5);
+            \draw [line width=0.5pt] (3,0)-- (-2,6.5);
+            \draw [line width=0.5pt] (3,0)-- (-2,-2.5);
+            \draw [line width=0.5pt] (3,0)-- (-2,0.5);
+            \draw [line width=0.5pt] (3,0)-- (-2,-5.5);
+            \draw [line width=0.5pt] (3,0)-- (-2,3.5);
+            \draw [line width=0.5pt] (5,0)-- (7,0);
+            \draw [line width=0.5pt] (-4,7)-- (-4,6);
+            \draw [line width=0.5pt] (-4,6)-- (-2,6);
+            \draw [line width=0.5pt] (-2,6)-- (-2,7);
+            \draw [line width=0.5pt] (-2,7)-- (-4,7);
+            \draw [line width=0.5pt] (-4,4)-- (-4,3);
+            \draw [line width=0.5pt] (-4,3)-- (-2,3);
+            \draw [line width=0.5pt] (-2,3)-- (-2,4);
+            \draw [line width=0.5pt] (-2,4)-- (-4,4);
+            \draw [line width=0.5pt] (-4,1)-- (-4,0);
+            \draw [line width=0.5pt] (-4,0)-- (-2,0);
+            \draw [line width=0.5pt] (-2,0)-- (-2,1);
+            \draw [line width=0.5pt] (-2,1)-- (-4,1);
+            \draw [line width=0.5pt] (-4,-2)-- (-2,-2);
+            \draw [line width=0.5pt] (-2,-2)-- (-2,-3);
+            \draw [line width=0.5pt] (-2,-3)-- (-4,-3);
+            \draw [line width=0.5pt] (-4,-3)-- (-4,-2);
+            \draw [line width=0.5pt] (-4,-5)-- (-4,-6);
+            \draw [line width=0.5pt] (-4,-6)-- (-2,-6);
+            \draw [line width=0.5pt] (-2,-6)-- (-2,-5);
+            \draw [line width=0.5pt] (-2,-5)-- (-4,-5);
+            \draw [line width=0.5pt,color=ttttff] (-9,1)-- (-9,-1);
+            \draw [line width=0.5pt,color=ttttff] (-9,-1)-- (-11,-1);
+            \draw [line width=0.5pt,color=ttttff] (-11,-1)-- (-11,1);
+            \draw [line width=0.5pt] (-13,1)-- (-15,1);
+            \draw [line width=0.5pt] (-15,1)-- (-15,-1);
+            \draw [line width=0.5pt] (-15,-1)-- (-13,-1);
+            \draw [line width=0.5pt] (-13,-1)-- (-13,1);
+            \draw [line width=0.5pt,color=ttttff] (-11,1)-- (-9,1);
+            \draw [line width=0.5pt,color=ttttff] (3,1)-- (3,-1);
+            \draw [line width=0.5pt,color=ttttff] (3,-1)-- (5,-1);
+            \draw [line width=0.5pt,color=ttttff] (5,-1)-- (5,1);
+            \draw [line width=0.5pt,color=ttttff] (5,1)-- (3,1);
+            \draw [line width=0.5pt] (7,1)-- (7,-1);
+            \draw [line width=0.5pt] (7,-1)-- (9,-1);
+            \draw [line width=0.5pt] (9,-1)-- (9,1);
+            \draw [line width=0.5pt] (9,1)-- (7,1);
+            % \begin{scriptsize}
+
+            \draw[color=ududff] (-17.747440280565362,-0.0524189020112442) node {Alice $\longrightarrow$ };
+            \draw[color=ududff] (11.747440280565362,-0.0524189020112442) node {$\longrightarrow$ Bob };
+            \draw[color=ududff] (5.747440280565362,-8.0524189020112442) node {Tổng hợp};
+            \draw[color=ududff] (-11.747440280565362,-8.0524189020112442) node {Truyền tin};
+            \draw[color=ududff] (-2.747440280565362,-8.0524189020112442) node {Xác nhận};
+
+            % \end{scriptsize}
+        \end{tikzpicture}
+    \end{figure}
+\end{frame}
+
+\section{Kết luận}
+\begin{frame}
+    \frametitle{Kết luận}
+    Mật mã đường cong elliptic được áp dụng rộng rãi vào đầu những năm 2000,
+    đã mang lại những cải tiến đáng kể
+    bằng cách giảm đáng kể kích thước khóa cần thiết cho cùng một mức độ bảo mật.
+    Tuy nhiên, ECC, giống như các hệ mã hóa khác dựa trên nhóm abel, đang bị đe dọa bởi sự phát triển của tính toán lượng tử và rất có thể sẽ
+    lỗi thời. Tuy nhiên, điều này sẽ không làm nản lòng những người đam mê đường cong elliptic.
+    Đầu tiên, đường cong elliptic sẽ tồn tại trong một thời gian dài trước khi máy tính lượng tử có thể phá vỡ giao thức.
+    Thứ hai, đường cong elliptic là cấu trúc toán học hấp dẫn chứa nhiều tính chất thú vị.
+    Như chúng ta thảo luận trong phần thứ hai, các isogeny
+    có thể được chứng minh là có khả năng chống lượng tử, có kể kế thừa ECC.
+\end{frame}
 \begin{frame} [allowframebreaks]\frametitle{References}
 
     \bibliographystyle{apalike}
